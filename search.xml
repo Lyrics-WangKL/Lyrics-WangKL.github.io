@@ -66,32 +66,26 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/02/20/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
-first post. Check <a href="https://hexo.io/docs/">documentation</a> for
-more info. If you get any problems when using Hexo, you can find the
-answer in <a
-href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
-you can ask me on <a
-href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>hexo 增加本地搜索功能</title>
+    <url>/2022/03/01/%5B%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%5D%20hexo%20%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<p>本地搜索即在个人主页内搜索所有相关内容。如果想搜索个人网站内的文章内容，可以使用。效果如下图：
+<img src="/2022/03/01/%5B%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%5D%20hexo%20%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/search_result.png" class="" title="50% 50% 搜索效果图"></p>
+<span id="more"></span>
+<h2 id="安装插件">1. 安装插件</h2>
+<p>安装<code>hexo-generator-searchdb</code>, 执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+<h2 id="修改站点配置文件">2. 修改站点配置文件</h2>
+<p>安装成功后，在<code>站点配置</code>文件中启动相关功能。</p>
+<p>修改<code>hexo/_config.yml</code>站点配置文件，在任意位置(优选文件末尾)新增以下内容：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 本地搜索功能</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
+<h2 id="修改主题配置文件">3. 修改主题配置文件</h2>
+<p>编辑<code>主题配置文件</code>，启用本地搜索功能：</p>
+<p><code>主题配置文件</code>中已包含了相关的设置，只需要修改启用即可。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 本地搜索功能</span></span><br><span class="line">local_search:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 ]]></content>
+      <tags>
+        <tag>hexo, 主页, 搜索</tag>
+      </tags>
   </entry>
   <entry>
     <title>test_new_site</title>
@@ -120,6 +114,34 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2022/02/20/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
+first post. Check <a href="https://hexo.io/docs/">documentation</a> for
+more info. If you get any problems when using Hexo, you can find the
+answer in <a
+href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
+you can ask me on <a
+href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>更丰富的文章测试</title>
     <url>/2022/02/21/%E6%9B%B4%E4%B8%B0%E5%AF%8C%E7%9A%84%E6%96%87%E7%AB%A0%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<h1 id="标题">标题</h1>
@@ -139,28 +161,6 @@ NexT 提供三种方式来控制文章在首页的显示方式。
 ]]></content>
       <tags>
         <tag>hexo, 主页, 测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo 增加本地搜索功能</title>
-    <url>/2022/03/01/%5B%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%5D%20hexo%20%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<p>本地搜索即在个人主页内搜索所有相关内容。如果想搜索个人网站内的文章内容，可以使用。效果如下图：
-<img src="/2022/03/01/%5B%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%5D%20hexo%20%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/search_result.png" class="" title="50% 50% 搜索效果图"></p>
-<span id="more"></span>
-<h2 id="安装插件">1. 安装插件</h2>
-<p>安装<code>hexo-generator-searchdb</code>, 执行以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-<h2 id="修改站点配置文件">2. 修改站点配置文件</h2>
-<p>安装成功后，在<code>站点配置</code>文件中启动相关功能。</p>
-<p>修改<code>hexo/_config.yml</code>站点配置文件，在任意位置(优选文件末尾)新增以下内容：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 本地搜索功能</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
-<h2 id="修改主题配置文件">3. 修改主题配置文件</h2>
-<p>编辑<code>主题配置文件</code>，启用本地搜索功能：</p>
-<p><code>主题配置文件</code>中已包含了相关的设置，只需要修改启用即可。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 本地搜索功能</span></span><br><span class="line">local_search:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>hexo, 主页, 搜索</tag>
       </tags>
   </entry>
 </search>
