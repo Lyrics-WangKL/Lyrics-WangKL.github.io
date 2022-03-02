@@ -163,4 +163,24 @@ NexT 提供三种方式来控制文章在首页的显示方式。
         <tag>hexo, 主页, 测试</tag>
       </tags>
   </entry>
+  <entry>
+    <title>加密文章设置</title>
+    <url>/2022/03/02/%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[<p>文章加密访问功能</p>
+<p>（这里放效果图）</p>
+<span id="more"></span>
+<p>打开
+<code>themes-&gt;next-&gt;layout-&gt;_partials-&gt;head.swig</code>
+文件,插入这样一段代码:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">(function()&#123;</span><br><span class="line">    if(&#x27;&#123;&#123; page.password &#125;&#125;&#x27;)&#123;</span><br><span class="line">        if(prompt(&#x27;请输入文章密码&#x27;) !== &#x27;&#123;&#123; page.password &#125;&#125;&#x27;)&#123;</span><br><span class="line">		    alert(&#x27;x~~~~x&#x27;);</span><br><span class="line">			history.back();</span><br><span class="line">		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<p>在需要加密的文章中，增加password</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 加密文章设置</span><br><span class="line">date: 2022-03-02 23:28:00</span><br><span class="line">categories:</span><br><span class="line"><span class="bullet">  -</span> 个人网站搭建 </span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">  -</span> Hexo</span><br><span class="line"><span class="section">password: 123456</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>个人网站搭建</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
 </search>
