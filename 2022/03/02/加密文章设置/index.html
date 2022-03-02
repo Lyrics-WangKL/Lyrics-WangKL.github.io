@@ -15,29 +15,20 @@
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-(function(){
-    if(''){
-        if(prompt('请输入文章密码') !== ''){
-		    alert('x~~~~x');
-			history.back();
-		}
-    }
-})();
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"lyrics-wangkl.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false,"menu":{"home":"/","about":"/about","tags":"/tags","categories":"/categories/","archives":"/archives","message":"/message"},"menu_icons":{"enable":true,"home":"fa-home","about":"fa-user","tags":"fa-tags","categories":"fa-categories","archives":"fa-archives","message":"fa-message"}},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-
-  <meta name="description" content="文章加密访问功能 （这里放效果图）">
+  <meta name="description" content="这里有东西被加密了，需要输入密码查看哦。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="加密文章设置">
 <meta property="og:url" content="https://lyrics-wangkl.github.io/2022/03/02/%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0%E8%AE%BE%E7%BD%AE/index.html">
 <meta property="og:site_name" content="叁拾涂漾">
-<meta property="og:description" content="文章加密访问功能 （这里放效果图）">
+<meta property="og:description" content="这里有东西被加密了，需要输入密码查看哦。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-02T15:28:00.000Z">
-<meta property="article:modified_time" content="2022-03-02T15:31:59.151Z">
+<meta property="article:modified_time" content="2022-03-02T16:01:33.256Z">
 <meta property="article:author" content="Lyrics WangKL">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
@@ -227,10 +218,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-03-02 23:28:00 / 修改时间：23:31:59" itemprop="dateCreated datePublished" datetime="2022-03-02T23:28:00+08:00">2022-03-02</time>
+              <time title="创建时间：2022-03-02 23:28:00" itemprop="dateCreated datePublished" datetime="2022-03-02T23:28:00+08:00">2022-03-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-03 00:01:33" itemprop="dateModified" datetime="2022-03-03T00:01:33+08:00">2022-03-03</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -252,16 +249,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>文章加密访问功能</p>
-<p>（这里放效果图）</p>
-<span id="more"></span>
-<p>打开
-<code>themes-&gt;next-&gt;layout-&gt;_partials-&gt;head.swig</code>
-文件,插入这样一段代码:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(function()&#123;</span><br><span class="line">    if(&#x27;&#123;&#123; page.password &#125;&#125;&#x27;)&#123;</span><br><span class="line">        if(prompt(&#x27;请输入文章密码&#x27;) !== &#x27;&#123;&#123; page.password &#125;&#125;&#x27;)&#123;</span><br><span class="line">		    alert(&#x27;x~~~~x&#x27;);</span><br><span class="line">			history.back();</span><br><span class="line">		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-<p>在需要加密的文章中，增加password</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 加密文章设置</span><br><span class="line">date: 2022-03-02 23:28:00</span><br><span class="line">categories:</span><br><span class="line"><span class="bullet">  -</span> 个人网站搭建 </span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">  -</span> Hexo</span><br><span class="line"><span class="section">password: 123456</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
-
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="b9bc83852854eb641ff1f9ed38890b2bfa3bfc93c2cfb65e0914c5059c142037">4630436162ade97ba2718b7d0c4b3b6338742b62afdb1cff575bc064751158a32810ae0fcba6a15e0b56fcaec6eeaadcb7bdaa58b1a84f9aa5ebd92e5d13e2ea3a13254a1280b611ccc7737ccbf2c3d1b5a0a4098b4768fb6f146d6e2178724049887e06249e022fd6679985508c78cbc53770627904d7392d56307b337b72ac29991d6ca9ca15eddbcc7dbcc106da795e87bc5e27d8f1455fb77bc3859a9d60a90b7717db616eae299ecd67fa7003323c96a626b1da039da3f2980c3817597f1247d7bb014b29c471195f16f0a704390642c7a34f378e03e350205a0d552d51726bc06af7d5dbe9eb4b91bbc98263e7e36e4eda72ff0058e2e76cf3e31c01970c2953fdaea2a71101c71a9b4c8062edb822ea0b5d9a83dec1ff418dcecff7bc99cbe98a7b4f818ac1b1c004aa7609aa6bf1f671db7f99dbe61fac6affe686ca89308c37bdc2fcfac6d7ca4fdd1944e3db361b90f531a836c3eff8f7f15eac7e2beab01259f30c937a213265556c97affb39fd87b27c0c33bb06fcfe29c59166a3ee9c46a5b463084928b66afa39c7f2b8a23572f065045b6c9123e53b568e9de6413e38d4a3f5b0f591cd5cfc2da23153d8b0dc9810e12b74dcbec6be16a977155e20ac8d2150f148928c86d2052f387b734b8a0ea07df8e898fc5debc1c20a537f9423246863169a3d0b827039bf12d9e29fce31ad500fa3e486dd2d080e9711b276cce0997dadd5742f0bed4fe9c3facf51476ceef3ea1ae91b15079a8fc5bb64812c7be01a9e340fa94f7f1db0420f61b4af5c0811c433d2dc51b832b03788a54f534f7bf929a7aa427da492f7ae8cebe4473b7e088f01f6e6802c8dd587fbc211cbf8564d102c0e1c75230b5ac470c9c6495f19b9d1a3956ea3afe04586692627b6f538a5e16ce6da07c5dbd16bc21b96356b9998f0f1915a22aafd5011f1333568e522310ea227fa0ec41a9d739d6989cdae0d3bcb0ed8fbe5d65a4473e3ec690507b521bf190b77a44a45f5285d3f6862c444270ce3d110e7dcb388cd98ab7beacb896a89590bd5b5b1a239040877d7801047e53ec5436ff7043bbed3c8180137541629016d737cfdac583ca20698ac1d70ee4f5d779e78e76be898d5d5f395c2bd2c5769f987d405d8dfcc671dc9e86d184d56fd7cb319580499d3026570728c8e706fd93f3a6e300bb9f75061650d2e4f21f396475c4a46f66798fa041cf974352474176728461895036012d3561d8c9773b2404f47d31bb0b0d0fddd02f48ac818c8363af21ded1e8f334a195c8007014cb32cb85d1062aa9729cfecd114df60b751538504644fd8f81884c44c0982e160fc8c6730a5d7e881b9ce17b9ed555a3edba91b14a99516fae5c44a40cc5e58458f99c07a9ec68423a72443084fb6dd63aa2196374d8203b5718f16503277d08c64449f2ffad30048a9f6a9acece02549ff9fe8e2e374aef26d1636f573461e435ddbc2bc8689275d52dd002bcf5db5acb76cd3f6f2157d91a5f94d4fd037f5ad0b03ba84ded8c5b53a2ac934d7fd17c108510604e68c04fddf4e1d7ce15dfc5d4c57299436e766e3d6fcddbfb301946abbb164e0be4b5d1c3b0e0319e94a65a3a68f42cc3ba31c71d493d19abcc763663aeca86cbefe55265124fcd87cc84a0b2c59681638a3d31f36900c130db01f35cb5d60965299f9be9d6bc5fe738356f6511aedcc2d8e4aaf958398418bc813790b18104c1c5e8c5112c373281084bbd590430bf867f9ea610baee32107180cc0d4a6da6e097bfb1a4c70c19b38b34cce8016a9fc5e1f4d87805935ccc144ce034f60f210a8336e1bb4f738062983e40b2e01b5ceba91a2b8d2ee8cd8663189fe3e38ed8376e43affe0a1ff13172a442aaf639a633d9fa3985821a96a8a70e840e80d1d4d673debb435f382d1623ef2ebd83356c8768122899dc0eff14be7a2151dfd8c9855512a4930454ea24b662a86d5bf2f7a06bed2dc0c25479228b305709904bed3dc76625252aa5c3a0d570db52666c6dab1a85bc8c7fd836b564c75c71b43b5fde7cbd05ba379bdb89afcf37f589d67810303a34656d1b6f02553fce1ed706a1d744cd8a3065e764d3f300d0c00a41bcf0c0950893d825ba04b4f6b19633c95c3256eeb0509c1553ee013ef2d6fcc95721aaa9e1eac13ba8bf15542ca87d510af120edb75ee3fe4da28d4be916d335e607f239f0a6be079043e4114d640c3ee0369e564b578719aa2d26fec8d8d54cd9931e51dd9cb9ab68b794293a9dd221f5c10fca41afad63f465ad4561ccb64ae76bd9f227970207adf038bab1b6fc831571ec8990b1b7ac172f081ab8fa8480ad8a543b9ea1f2a21e0ffc00b47345a93be753512df9df916b862b07bfa2b865f91ba69f74a39ffc1bdf097933c8d893041171e2b15b05311d5893ecbf78c221273c171c27bef6c018877764495e5065d22d8f9c5c78b32fda097d610ac8c2df11e2a4ce7545c7bba8fa7da580a351053b67c0d75cf084a4cb95b46ad99411613a6a227d3a27c21d71915d73682d6075cedd2a0dd06a64761d142502ba96937e2f6859094889a4e11def565d18f192a0cdf5d00b64aff64fa517eee41b84198acd29e37c76b2ae437ada5d89c6d35ba7d84a1e7fc7de6d6bd3cd1f8e1a69178120a24cd5b1fc52d97fb95d31f834965b50ee969e3fe39e8dde058c60e41dfe0aaab815263ec75fa41cc69056390b2266e9f9cdd6e6f88de1d96a0099709432be24aebf431726f3b7f0f52d97f328336bfb5bc469b2659a56faea3e68dfc4d8089a7bb7f657d0e5044d153dd4f05bdacb75c3b5b31e1f35592db94b2bf5c49ab685736372ce3442cb01b5fe4a1b4b554e1d1b33ae7577d0f2d1287d6bd131ea521ea1dc2ed1d224b1467c23e9fa06494aec38016de0b634c5ed5b9a4db953d2d6d380f2da8fc9bdbb079c336df0d56c488cafbfd4857ec4e16645c236e04c826732466bfb591d6c8a1e19643c9d5191d469e6a843e5107a9d0bce108fd23d36e9d24d3736a7d6236</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
     </div>
 
     
@@ -269,8 +268,9 @@
     
 
       <footer class="post-footer">
+          
           <div class="post-tags">
-              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+              <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
           </div>
 
         
@@ -282,7 +282,10 @@
     <a href="/2022/03/01/%5B%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%5D%20hexo%20%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/" rel="prev" title="hexo 增加本地搜索功能">
       <i class="fa fa-chevron-left"></i> hexo 增加本地搜索功能
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/03/03/%E6%96%B0%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF%E6%B5%8B%E8%AF%95/" rel="next" title="新文档模板测试">
+      新文档模板测试 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -356,7 +359,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
