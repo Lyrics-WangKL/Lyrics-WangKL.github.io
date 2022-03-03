@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo 增加本地搜索功能</title>
+    <url>/2022/03/01/%5B%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%5D%20hexo%20%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<blockquote>
+<p>本地搜索即在个人主页内搜索所有相关内容。如果想搜索个人网站内的文章内容，可以使用。</p>
+</blockquote>
+<span id="more"></span>
+<p>效果如下图： <img src="/2022/03/01/%5B%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%5D%20hexo%20%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/search_result.png" class="" title="50% 50% 搜索效果图"></p>
+<!-- more -->
+<h2 id="安装插件">1. 安装插件</h2>
+<p>安装<code>hexo-generator-searchdb</code>, 执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+<h2 id="修改站点配置文件">2. 修改站点配置文件</h2>
+<p>安装成功后，在<code>站点配置</code>文件中启动相关功能。</p>
+<p>修改<code>hexo/_config.yml</code>站点配置文件，在任意位置(优选文件末尾)新增以下内容：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 本地搜索功能</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
+<h2 id="修改主题配置文件">3. 修改主题配置文件</h2>
+<p>编辑<code>主题配置文件</code>，启用本地搜索功能：</p>
+<p><code>主题配置文件</code>中已包含了相关的设置，只需要修改启用即可。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 本地搜索功能</span></span><br><span class="line">local_search:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>hexo, 主页, 搜索</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Github和Hexo建站-主题配置</title>
     <url>/2022/02/20/Github%E5%92%8CHexo%E5%BB%BA%E7%AB%99-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h1 id="hexo文件夹说明">Hexo文件夹说明</h1>
+    <content><![CDATA[<blockquote>
+<p>Hexo文件夹说明</p>
+</blockquote>
+<span id="more"></span>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">├── .github            #git信息</span><br><span class="line">├── languages          #多语言</span><br><span class="line">|   ├── default.yml    #默认语言</span><br><span class="line">|   ├── zh-Hans.yml      #简体中文</span><br><span class="line">|   └── zh-tw.yml      #繁体中文</span><br><span class="line">├── layout             #布局，根目录下的*.ejs文件是对主页，分页，存档等的控制</span><br><span class="line">|   ├── _custom        #可以自己修改的模板，覆盖原有模板</span><br><span class="line">|   |   ├── _header.swig    #头部样式</span><br><span class="line">|   |   ├── _sidebar.swig   #侧边栏样式</span><br><span class="line">|   ├── _macro        #可以自己修改的模板，覆盖原有模板</span><br><span class="line">|   |   ├── post.swig    #文章模板</span><br><span class="line">|   |   ├── reward.swig    #打赏模板</span><br><span class="line">|   |   ├── sidebar.swig   #侧边栏模板</span><br><span class="line">|   ├── _partial       #局部的布局</span><br><span class="line">|   |   ├── head       #头部模板</span><br><span class="line">|   |   ├── search     #搜索模板</span><br><span class="line">|   |   ├── share      #分享模板</span><br><span class="line">|   ├── _script        #局部的布局</span><br><span class="line">|   ├── _third-party   #第三方模板</span><br><span class="line">|   ├── _layout.swig   #主页面模板</span><br><span class="line">|   ├── index.swig     #主页面模板</span><br><span class="line">|   ├── page           #页面模板</span><br><span class="line">|   └── tag.swig       #tag模板</span><br><span class="line">├── scripts            #script源码</span><br><span class="line">|   ├── tags           #tags的script源码</span><br><span class="line">|   ├── marge.js       #页面模板</span><br><span class="line">├── source             #源码</span><br><span class="line">|   ├── css            #css源码</span><br><span class="line">|   |   ├── _common    #*.styl基础css</span><br><span class="line">|   |   ├── _custom    #*.styl局部css</span><br><span class="line">|   |   └── _mixins    #mixins的css</span><br><span class="line">|   ├── fonts          #字体</span><br><span class="line">|   ├── images         #图片</span><br><span class="line">|   ├── uploads        #添加的文件</span><br><span class="line">|   └── js             #javascript源代码</span><br><span class="line">├── _config.yml        #主题配置文件</span><br><span class="line">└── README.md          #说明文档</span><br><span class="line">//Hexo文件夹详情</span><br><span class="line">├── .deploy</span><br><span class="line">├── public</span><br><span class="line">├── scaffolds</span><br><span class="line">├── scripts</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">├── themes</span><br><span class="line">├── _config.yml</span><br><span class="line">└── package.json</span><br></pre></td></tr></table></figure>
 <table>
 <colgroup>
@@ -66,28 +94,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>hexo 增加本地搜索功能</title>
-    <url>/2022/03/01/%5B%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%5D%20hexo%20%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<p>本地搜索即在个人主页内搜索所有相关内容。如果想搜索个人网站内的文章内容，可以使用。效果如下图：
-<img src="/2022/03/01/%5B%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%5D%20hexo%20%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/search_result.png" class="" title="50% 50% 搜索效果图"></p>
-<span id="more"></span>
-<h2 id="安装插件">1. 安装插件</h2>
-<p>安装<code>hexo-generator-searchdb</code>, 执行以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-<h2 id="修改站点配置文件">2. 修改站点配置文件</h2>
-<p>安装成功后，在<code>站点配置</code>文件中启动相关功能。</p>
-<p>修改<code>hexo/_config.yml</code>站点配置文件，在任意位置(优选文件末尾)新增以下内容：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 本地搜索功能</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
-<h2 id="修改主题配置文件">3. 修改主题配置文件</h2>
-<p>编辑<code>主题配置文件</code>，启用本地搜索功能：</p>
-<p><code>主题配置文件</code>中已包含了相关的设置，只需要修改启用即可。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 本地搜索功能</span></span><br><span class="line">local_search:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>hexo, 主页, 搜索</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2022/02/20/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
@@ -145,7 +151,7 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
     <title>加密文章设置</title>
     <url>/2022/03/02/%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0%E8%AE%BE%E7%BD%AE/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="b9bc83852854eb641ff1f9ed38890b2bfa3bfc93c2cfb65e0914c5059c142037">4630436162ade97ba2718b7d0c4b3b6338742b62afdb1cff575bc064751158a32810ae0fcba6a15e0b56fcaec6eeaadcb7bdaa58b1a84f9aa5ebd92e5d13e2ea3a13254a1280b611ccc7737ccbf2c3d1b5a0a4098b4768fb6f146d6e2178724049887e06249e022fd6679985508c78cbc53770627904d7392d56307b337b72ac29991d6ca9ca15eddbcc7dbcc106da795e87bc5e27d8f1455fb77bc3859a9d60a90b7717db616eae299ecd67fa7003323c96a626b1da039da3f2980c3817597f1247d7bb014b29c471195f16f0a704390642c7a34f378e03e350205a0d552d51726bc06af7d5dbe9eb4b91bbc98263e7e36e4eda72ff0058e2e76cf3e31c01970c2953fdaea2a71101c71a9b4c8062edb822ea0b5d9a83dec1ff418dcecff7bc99cbe98a7b4f818ac1b1c004aa7609aa6bf1f671db7f99dbe61fac6affe686ca89308c37bdc2fcfac6d7ca4fdd1944e3db361b90f531a836c3eff8f7f15eac7e2beab01259f30c937a213265556c97affb39fd87b27c0c33bb06fcfe29c59166a3ee9c46a5b463084928b66afa39c7f2b8a23572f065045b6c9123e53b568e9de6413e38d4a3f5b0f591cd5cfc2da23153d8b0dc9810e12b74dcbec6be16a977155e20ac8d2150f148928c86d2052f387b734b8a0ea07df8e898fc5debc1c20a537f9423246863169a3d0b827039bf12d9e29fce31ad500fa3e486dd2d080e9711b276cce0997dadd5742f0bed4fe9c3facf51476ceef3ea1ae91b15079a8fc5bb64812c7be01a9e340fa94f7f1db0420f61b4af5c0811c433d2dc51b832b03788a54f534f7bf929a7aa427da492f7ae8cebe4473b7e088f01f6e6802c8dd587fbc211cbf8564d102c0e1c75230b5ac470c9c6495f19b9d1a3956ea3afe04586692627b6f538a5e16ce6da07c5dbd16bc21b96356b9998f0f1915a22aafd5011f1333568e522310ea227fa0ec41a9d739d6989cdae0d3bcb0ed8fbe5d65a4473e3ec690507b521bf190b77a44a45f5285d3f6862c444270ce3d110e7dcb388cd98ab7beacb896a89590bd5b5b1a239040877d7801047e53ec5436ff7043bbed3c8180137541629016d737cfdac583ca20698ac1d70ee4f5d779e78e76be898d5d5f395c2bd2c5769f987d405d8dfcc671dc9e86d184d56fd7cb319580499d3026570728c8e706fd93f3a6e300bb9f75061650d2e4f21f396475c4a46f66798fa041cf974352474176728461895036012d3561d8c9773b2404f47d31bb0b0d0fddd02f48ac818c8363af21ded1e8f334a195c8007014cb32cb85d1062aa9729cfecd114df60b751538504644fd8f81884c44c0982e160fc8c6730a5d7e881b9ce17b9ed555a3edba91b14a99516fae5c44a40cc5e58458f99c07a9ec68423a72443084fb6dd63aa2196374d8203b5718f16503277d08c64449f2ffad30048a9f6a9acece02549ff9fe8e2e374aef26d1636f573461e435ddbc2bc8689275d52dd002bcf5db5acb76cd3f6f2157d91a5f94d4fd037f5ad0b03ba84ded8c5b53a2ac934d7fd17c108510604e68c04fddf4e1d7ce15dfc5d4c57299436e766e3d6fcddbfb301946abbb164e0be4b5d1c3b0e0319e94a65a3a68f42cc3ba31c71d493d19abcc763663aeca86cbefe55265124fcd87cc84a0b2c59681638a3d31f36900c130db01f35cb5d60965299f9be9d6bc5fe738356f6511aedcc2d8e4aaf958398418bc813790b18104c1c5e8c5112c373281084bbd590430bf867f9ea610baee32107180cc0d4a6da6e097bfb1a4c70c19b38b34cce8016a9fc5e1f4d87805935ccc144ce034f60f210a8336e1bb4f738062983e40b2e01b5ceba91a2b8d2ee8cd8663189fe3e38ed8376e43affe0a1ff13172a442aaf639a633d9fa3985821a96a8a70e840e80d1d4d673debb435f382d1623ef2ebd83356c8768122899dc0eff14be7a2151dfd8c9855512a4930454ea24b662a86d5bf2f7a06bed2dc0c25479228b305709904bed3dc76625252aa5c3a0d570db52666c6dab1a85bc8c7fd836b564c75c71b43b5fde7cbd05ba379bdb89afcf37f589d67810303a34656d1b6f02553fce1ed706a1d744cd8a3065e764d3f300d0c00a41bcf0c0950893d825ba04b4f6b19633c95c3256eeb0509c1553ee013ef2d6fcc95721aaa9e1eac13ba8bf15542ca87d510af120edb75ee3fe4da28d4be916d335e607f239f0a6be079043e4114d640c3ee0369e564b578719aa2d26fec8d8d54cd9931e51dd9cb9ab68b794293a9dd221f5c10fca41afad63f465ad4561ccb64ae76bd9f227970207adf038bab1b6fc831571ec8990b1b7ac172f081ab8fa8480ad8a543b9ea1f2a21e0ffc00b47345a93be753512df9df916b862b07bfa2b865f91ba69f74a39ffc1bdf097933c8d893041171e2b15b05311d5893ecbf78c221273c171c27bef6c018877764495e5065d22d8f9c5c78b32fda097d610ac8c2df11e2a4ce7545c7bba8fa7da580a351053b67c0d75cf084a4cb95b46ad99411613a6a227d3a27c21d71915d73682d6075cedd2a0dd06a64761d142502ba96937e2f6859094889a4e11def565d18f192a0cdf5d00b64aff64fa517eee41b84198acd29e37c76b2ae437ada5d89c6d35ba7d84a1e7fc7de6d6bd3cd1f8e1a69178120a24cd5b1fc52d97fb95d31f834965b50ee969e3fe39e8dde058c60e41dfe0aaab815263ec75fa41cc69056390b2266e9f9cdd6e6f88de1d96a0099709432be24aebf431726f3b7f0f52d97f328336bfb5bc469b2659a56faea3e68dfc4d8089a7bb7f657d0e5044d153dd4f05bdacb75c3b5b31e1f35592db94b2bf5c49ab685736372ce3442cb01b5fe4a1b4b554e1d1b33ae7577d0f2d1287d6bd131ea521ea1dc2ed1d224b1467c23e9fa06494aec38016de0b634c5ed5b9a4db953d2d6d380f2da8fc9bdbb079c336df0d56c488cafbfd4857ec4e16645c236e04c826732466bfb591d6c8a1e19643c9d5191d469e6a843e5107a9d0bce108fd23d36e9d24d3736a7d6236</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="0e751363073e089331e673772cd7438671b0d26a187e2710bbec3b339a0d5931">4630436162ade97ba2718b7d0c4b3b63d28f4f8957eafc94ae2cbc2b30196447293e6e92f155b2d06ee38b415ab7d6528c328d4dcfc7b24963823dc38e9b121f8b6cdca7aecafa201fdec9947bd1ff20a463adde1134b42d80ea3b81cf3733e8da726f2141e7bd5f1358ca43a8db16ecd329f3eeeb9a7dd3b8a5cc9ce0b2dd6ee1c2d1acdae6c4f23b906a9cc0faea4c14240312e770f5652382f032adca47cf15a181f2704ae70f7eea1dfff6e3136a03ef889a1b70707a35e5eb4590ea089ec60080779881f69dd74b1dfcf8ed6b4fe7cb82b340f9e279fc74688ebe92c650aa857f28dc0ca43f2dea3bc5f9ed5a0b1f3ade143b57210eb4fb88f461d0cf0a1e132da6f2328f940ee79651b8feabb7d7a84d34c536fee77f80ed0b90f11e99494cfa7c73ad68f9b32c6c7c6211d31fc7a86ce1ac059b84c53bec8a9e1ff6b95f10c10c2513fa0dccb43403d5cc5383623bd18fd3dafde9ce1181839bd9c52a44b8ebd723013c4d26262e8b395d0ef0c7a2c5193e36533f5880259779b2b4af0b934ec6477e436915974d00b7c45228053fab150b1acb904bf2dbbd272cac66bf637ead38f108345a1113ebd4786caf5636eac540e5198fa6cd69ea9c38a98f85ebf007fff08fb297726a2694c10f388d0a7e88a0fe2b5474bec8b4005b6b0e16644f7b841931f985e668a8574a9a83143ffabfc3f73d606c5b8c0651be9cbcfefddb0f9ae50b67f99736847d4a228c1d16c3ca5cb0e0296544444455847d6065e12bb0d6a37af3faf289580cd067e7a840fc4a9bcbf733ed3846947e2d6e2e7d31e6fbb6bc3130473588440b7fd34992f6096c69d53843150d430dcb755fa8c1c9d562aa63182bdf7e198362d472be9af0eece812ceef2274fe7b4eaeb2793af446accd5dba5ef5c462f094d3b7beb5787814a0b94a95b3d58a9b91a54d11c3474e9d32fb7874a931ff38fe69e3523b997a6d5ce3cceea8f59970720098452e150a448bb3ca6f921de309bf682a67d7ff1d55b0a46dcabc99acf6ee0de04a922c1f28c033ee82f2ff251b8b1c862ee293c0b97e9f4150c7ca091a1d6ba2e850425a449c995148a9fefe9d0e5c00e0f3ff5d59fffa61be75b1be7bca78ca513f78def1387436a646521e472e68672b82f6e5af7e7ab330624d9ebd80f4fa3f51f195be0d93c2ce994fb7ca4822bb8042b9d0edd1b82ca43767051d447fc54140cb28c6185c9ad34c7bd3ecd82a3e3e1d8bdfd50e9bcec4ff0df7eebb743d0b403f3542404977b8680e86039e8aa8c6e46c752f92d437ba0c63541038d8708bd0af2c771c1760eefbfb70afd284fef708234035d5306413e49dbe1de5a2eb486c94791f5ab1c8a215dc210b1bfc0085f72add9766aeff5d4bc7fdba5752637136488d80281effa412860a567565b1bb6792b2c1fb4f43c278364ab6b3dd8abcb8ce29f4bd8007185d852ec201d97693ef243e9b3275264ac746dca4e47543a4c98111e3bc9cceb20fc40ea1d71235f0138ec6e1a7e9f3d2d1038ff17e8490dc097a59335450a6ff0f062e93e7b0d9fcf3dd0a81d652fab2935efcba0b4987891b04d29beff07fbadf968394d54dc8da283e9e6c8b24f73533345efe3b5d092a997ffd6435d1c489798a7369fd1548ce0d8abd122d8e6999061602a07077138243d26d8f3ce257efae0721bb8f4e4cc1897558b4b97dbe6030e59c92423018deeb533c7940abbb106ba8214e5a320cd40b56e057e157c7860890c68f94107196306596977dfd021fc417083563ca5114ff1117077be71c0b102803704121d61cbfa9339333293679045db345d016ef3c6ff817f77a9a45d1be0514aea03d81f0751afbfd6b007d3f7ab5c6f45a5afbdb4b91238dcac4fc7c0ecb813753954a752c363b25015ce706eb6ecdad3619a833109543c458d5e5ea24a450333c44a118d27e2f13accc576131d67c9b8e5e7b2d0e297febb60b17e450f11e79c9d8a8d38406bf76845d5941049d77ba2fc4b083332d30790151c5a2cbe65dc0f3c703151eb5537dddd5473ae967ce868973d0a04a7696929d97c06e3eaf354ae7b0eb77af3dbce95253df66af6747e8ca5be2df85127aeb81f446b0a77bd9805b7e4665511cdf9fe411651a9b1e5fc0868937496d07e9c724567cd421ff7d6a52961d8f6790921a576ccc9e3591a58c7dab1dc71f2b5b1a883a9968c566abcbbb25f99b974025fc00036ac84e3aa6373b7271b999f042357a16511fc6cbd84bfa5907f58068a207f4501cdf44e499f5e157de6ce93256a4b218ab4876187465ad0b559043017a2e6d402a774e19e533ef7c27f59f7db298750b178d71bb26ffa6dc36b0302c8837dcbfcad9dd210e484b37301e2f346de9a3a380ba2496336669f151a86f512ff31a74dbba2a2fcd0831c414f05ae18cbc10c7c268b50d26ca7b90135e53608324817c81ccd14e3dc44d1217a57754714a03f8f568656666c3f0e69b3a198971a3715b40c12c3504f1f51329ef5acd64d9612c753e20f4b297a6f50259af90562429ed207dd94a7e2660c16daff8c62de03a32749689aa23502a7056eac0973f919040d4e7ed8fa7926d1e2a26ff7dfab67f3e9db4f2af4896ce2285dad6f7363a6fe4028c35f6018e901c5b5dadcdca3554b0c402229a10d1855868913e07d3d11d0147bbceb7ef20de843a99dcd46e4dac8ac70f87d88ea1e67ed1549da139e6c9324a02f717d861cc51d6c7dcd0d4a98034ac44b62580254fc0a636daf1b6d155ee8d280cceaef8389849f03231c7e631e16219e01731fe271b76709668cdaf3d8429e247fb0f63fd4751017f753f2054a3089b7446e39f92b94eabf46b85047d2d6163d74cfeca180ea9e8b4fbc07d0ea630acd8501a84b17d396527ffd4483877fce898978dd6501e2fdadd2460637bf773b11e1a573c03ec4a0f2be44655cca6b31835c3e9377c0ef8cea7e799f4e8e9408ad06a162c27b901f96254222b6168fcc3c8a847160240174ce9c3f2fa7f5f8d5790469e2ab7891fe55</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -166,7 +172,11 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
   <entry>
     <title>新文档模板测试</title>
     <url>/2022/03/03/%E6%96%B0%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<img src="/2022/03/03/%E6%96%B0%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF%E6%B5%8B%E8%AF%95/template.png" class="" title="50% 50% 模板字段">
+    <content><![CDATA[<blockquote>
+<p>根据文章模板字段，增加了一些关于置顶，公式支持，标签，归类等的默认字段</p>
+</blockquote>
+<span id="more"></span>
+<img src="/2022/03/03/%E6%96%B0%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF%E6%B5%8B%E8%AF%95/template.png" class="" title="50% 50% 模板字段">
 <p>修改位于hexo目录下（不是主题目录下）, 这里假设hexo-blog。</p>
 <p>hexo-blog -&gt; scafflods -&gt; post.md</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">toc: false</span><br><span class="line">mathjax: false</span><br><span class="line">top: false</span><br><span class="line">categories:</span><br><span class="line">tags:</span><br><span class="line">  - tagA</span><br><span class="line">  - tagB</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
@@ -181,11 +191,12 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
   <entry>
     <title>更丰富的文章测试</title>
     <url>/2022/02/21/%E6%9B%B4%E4%B8%B0%E5%AF%8C%E7%9A%84%E6%96%87%E7%AB%A0%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<h1 id="标题">标题</h1>
+    <content><![CDATA[<blockquote>
 <p>在首页显示一篇文章的部分内容，并提供一个链接跳转到全文页面是一个常见的需求。
 NexT 提供三种方式来控制文章在首页的显示方式。
 也就是说，在首页显示文章的摘录并显示 阅读全文
 按钮，可以通过以下方法：</p>
+</blockquote>
 <span id="more"></span>
 <p>下面的内容不会出现在摘要中</p>
 <h1 id="标题2">标题2</h1>
