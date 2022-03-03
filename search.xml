@@ -170,25 +170,6 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
       </tags>
   </entry>
   <entry>
-    <title>新文档模板测试</title>
-    <url>/2022/03/03/%E6%96%B0%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<blockquote>
-<p>根据文章模板字段，增加了一些关于置顶，公式支持，标签，归类等的默认字段</p>
-</blockquote>
-<span id="more"></span>
-<img src="/2022/03/03/%E6%96%B0%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF%E6%B5%8B%E8%AF%95/template.png" class="" title="50% 50% 模板字段">
-<p>修改位于hexo目录下（不是主题目录下）, 这里假设hexo-blog。</p>
-<p>hexo-blog -&gt; scafflods -&gt; post.md</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">toc: false</span><br><span class="line">mathjax: false</span><br><span class="line">top: false</span><br><span class="line">categories:</span><br><span class="line">tags:</span><br><span class="line">  - tagA</span><br><span class="line">  - tagB</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>个人网站搭建</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>更丰富的文章测试</title>
     <url>/2022/02/21/%E6%9B%B4%E4%B8%B0%E5%AF%8C%E7%9A%84%E6%96%87%E7%AB%A0%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<blockquote>
@@ -209,6 +190,25 @@ NexT 提供三种方式来控制文章在首页的显示方式。
 ]]></content>
       <tags>
         <tag>hexo, 主页, 测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>新文档模板测试</title>
+    <url>/2022/03/03/%E6%96%B0%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<blockquote>
+<p>根据文章模板字段，增加了一些关于置顶，公式支持，标签，归类等的默认字段</p>
+</blockquote>
+<span id="more"></span>
+<img src="/2022/03/03/%E6%96%B0%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF%E6%B5%8B%E8%AF%95/template.png" class="" title="50% 50% 模板字段">
+<p>修改位于hexo目录下（不是主题目录下）, 这里假设hexo-blog。</p>
+<p>hexo-blog -&gt; scafflods -&gt; post.md</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">toc: false</span><br><span class="line">mathjax: false</span><br><span class="line">top: false</span><br><span class="line">categories:</span><br><span class="line">tags:</span><br><span class="line">  - tagA</span><br><span class="line">  - tagB</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>个人网站搭建</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
