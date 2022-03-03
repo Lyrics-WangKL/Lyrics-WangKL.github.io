@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>hexo 增加本地搜索功能</title>
-    <url>/2022/03/01/%5B%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%5D%20hexo%20%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<blockquote>
-<p>本地搜索即在个人主页内搜索所有相关内容。如果想搜索个人网站内的文章内容，可以使用。</p>
-</blockquote>
-<span id="more"></span>
-<p>效果如下图： <img src="/2022/03/01/%5B%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%5D%20hexo%20%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/search_result.png" class="" title="50% 50% 搜索效果图"></p>
-<!-- more -->
-<h2 id="安装插件">1. 安装插件</h2>
-<p>安装<code>hexo-generator-searchdb</code>, 执行以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-<h2 id="修改站点配置文件">2. 修改站点配置文件</h2>
-<p>安装成功后，在<code>站点配置</code>文件中启动相关功能。</p>
-<p>修改<code>hexo/_config.yml</code>站点配置文件，在任意位置(优选文件末尾)新增以下内容：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 本地搜索功能</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
-<h2 id="修改主题配置文件">3. 修改主题配置文件</h2>
-<p>编辑<code>主题配置文件</code>，启用本地搜索功能：</p>
-<p><code>主题配置文件</code>中已包含了相关的设置，只需要修改启用即可。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 本地搜索功能</span></span><br><span class="line">local_search:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>hexo, 主页, 搜索</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Github和Hexo建站-主题配置</title>
     <url>/2022/02/20/Github%E5%92%8CHexo%E5%BB%BA%E7%AB%99-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<blockquote>
@@ -92,6 +67,31 @@
 <li>设置网站信息 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: 叁拾涂漾</span><br><span class="line">subtitle: WangKL&#x27;s Blog</span><br><span class="line">description: &#x27;念念谦虚，尘尘方便。命由我作，福自己求。&#x27;</span><br><span class="line">keywords: &#x27;知识管理 深度学习 AI安全 自动驾驶&#x27;</span><br><span class="line">author: Lyrics WangKL</span><br><span class="line">language: zh-CN</span><br><span class="line">timezone: &#x27;&#x27;</span><br></pre></td></tr></table></figure></li>
 </ol>
 ]]></content>
+  </entry>
+  <entry>
+    <title>hexo 增加本地搜索功能</title>
+    <url>/2022/03/01/%5B%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%5D%20hexo%20%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<blockquote>
+<p>本地搜索即在个人主页内搜索所有相关内容。如果想搜索个人网站内的文章内容，可以使用。</p>
+</blockquote>
+<span id="more"></span>
+<p>效果如下图： <img src="/2022/03/01/%5B%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%5D%20hexo%20%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/search_result.png" class="" title="50% 50% 搜索效果图"></p>
+<!-- more -->
+<h2 id="安装插件">1. 安装插件</h2>
+<p>安装<code>hexo-generator-searchdb</code>, 执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+<h2 id="修改站点配置文件">2. 修改站点配置文件</h2>
+<p>安装成功后，在<code>站点配置</code>文件中启动相关功能。</p>
+<p>修改<code>hexo/_config.yml</code>站点配置文件，在任意位置(优选文件末尾)新增以下内容：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 本地搜索功能</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
+<h2 id="修改主题配置文件">3. 修改主题配置文件</h2>
+<p>编辑<code>主题配置文件</code>，启用本地搜索功能：</p>
+<p><code>主题配置文件</code>中已包含了相关的设置，只需要修改启用即可。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 本地搜索功能</span></span><br><span class="line">local_search:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>hexo, 主页, 搜索</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hello World</title>
@@ -170,6 +170,25 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
       </tags>
   </entry>
   <entry>
+    <title>新文档模板测试</title>
+    <url>/2022/03/03/%E6%96%B0%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<blockquote>
+<p>根据文章模板字段，增加了一些关于置顶，公式支持，标签，归类等的默认字段</p>
+</blockquote>
+<span id="more"></span>
+<img src="/2022/03/03/%E6%96%B0%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF%E6%B5%8B%E8%AF%95/template.png" class="" title="50% 50% 模板字段">
+<p>修改位于hexo目录下（不是主题目录下）, 这里假设hexo-blog。</p>
+<p>hexo-blog -&gt; scafflods -&gt; post.md</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">toc: false</span><br><span class="line">mathjax: false</span><br><span class="line">top: false</span><br><span class="line">categories:</span><br><span class="line">tags:</span><br><span class="line">  - tagA</span><br><span class="line">  - tagB</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>个人网站搭建</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>更丰富的文章测试</title>
     <url>/2022/02/21/%E6%9B%B4%E4%B8%B0%E5%AF%8C%E7%9A%84%E6%96%87%E7%AB%A0%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<blockquote>
@@ -190,25 +209,6 @@ NexT 提供三种方式来控制文章在首页的显示方式。
 ]]></content>
       <tags>
         <tag>hexo, 主页, 测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>新文档模板测试</title>
-    <url>/2022/03/03/%E6%96%B0%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<blockquote>
-<p>根据文章模板字段，增加了一些关于置顶，公式支持，标签，归类等的默认字段</p>
-</blockquote>
-<span id="more"></span>
-<img src="/2022/03/03/%E6%96%B0%E6%96%87%E6%A1%A3%E6%A8%A1%E6%9D%BF%E6%B5%8B%E8%AF%95/template.png" class="" title="50% 50% 模板字段">
-<p>修改位于hexo目录下（不是主题目录下）, 这里假设hexo-blog。</p>
-<p>hexo-blog -&gt; scafflods -&gt; post.md</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">toc: false</span><br><span class="line">mathjax: false</span><br><span class="line">top: false</span><br><span class="line">categories:</span><br><span class="line">tags:</span><br><span class="line">  - tagA</span><br><span class="line">  - tagB</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>个人网站搭建</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
