@@ -257,42 +257,27 @@ NexT 提供三种方式来控制文章在首页的显示方式。
 tensorflow, etc)。</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda create -n &lt;envname&gt; &lt;python版本&gt;</span><br><span class="line"><span class="meta"># </span><span class="language-bash">例如: 创建python 2.7版本的环境，命名为  LeetCode_project</span></span><br><span class="line">conda create -n LeetCode_project python=2.7</span><br></pre></td></tr></table></figure>
 <p>如果不指定python版本，那么默认安装最新版本的python <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda create -n conda_test_env</span><br></pre></td></tr></table></figure> <img
-src="conda_create.png" alt="创建环境" /></p>
+src="conda_create.png#pic_center%20width=90%" /></p>
 <h2 id="查看环境包">查看环境包</h2>
 <p>查看已经安装成功的所有环境</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda env list</span><br><span class="line"><span class="meta"># </span><span class="language-bash">或者</span></span><br><span class="line">conda info --envs</span><br></pre></td></tr></table></figure>
-<figure>
-<img src="conda_envs_list.png#pic_center" alt="conda env list" />
-<figcaption aria-hidden="true">conda env list</figcaption>
-</figure>
+<p><img src="conda_envs_list.png#pic_center" /></p>
 <p>或者</p>
-<figure>
-<img src="conda_envs.png#pic_center" alt="anaconda查看环境包" />
-<figcaption aria-hidden="true">anaconda查看环境包</figcaption>
-</figure>
+<p><img src="conda_envs.png#pic_center" /></p>
 <h2 id="激活使用环境">激活使用环境</h2>
 <p>创建好环境后，进入指定的环境。</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda activate &lt;envname&gt;</span><br></pre></td></tr></table></figure>
 <p>例如，这里激活在上面创建的 <code>conda_test_env</code> 环境</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda activate conda_test_env</span><br></pre></td></tr></table></figure>
-<figure>
-<img src="conda_activate.png#pic_center" alt="conda_activate" />
-<figcaption aria-hidden="true">conda_activate</figcaption>
-</figure>
+<p><img src="conda_activate.png#pic_center" /></p>
 <h2 id="退出当前环境">退出当前环境</h2>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda deactivate</span><br></pre></td></tr></table></figure>
-<figure>
-<img src="conda_deactivate.png#pci_center" alt="conda_deactivate" />
-<figcaption aria-hidden="true">conda_deactivate</figcaption>
-</figure>
+<p><img src="conda_deactivate.png#pci_center" /></p>
 <p>注意上图中退出前后，命令符前面&lt;&gt;中的环境名称变化了。</p>
 <h2 id="删除环境">删除环境</h2>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda remove -n &lt;envname&gt; --all</span><br></pre></td></tr></table></figure>
 <p>例如，移除上面建立的 <code>conda_test_env</code> 环境。</p>
-<figure>
-<img src="conda_remove.png#pci_center" alt="conda_remove" />
-<figcaption aria-hidden="true">conda_remove</figcaption>
-</figure>
+<p><img src="conda_remove.png#pci_center" /></p>
 <h1 id="anaconda安装包的管理">anaconda安装包的管理</h1>
 <h2 id="安装指定的包">安装指定的包</h2>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda install &lt;pkgname&gt;</span><br></pre></td></tr></table></figure>
@@ -301,19 +286,16 @@ src="conda_create.png" alt="创建环境" /></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda list</span><br></pre></td></tr></table></figure>
 <p>这里我们先切换到 <code>PycharmProjects</code>
 环境，并查看所有的包。</p>
-<figure>
-<img src="conda_list.png#pci_center" alt="conda_list" />
-<figcaption aria-hidden="true">conda_list</figcaption>
-</figure>
+<p><img src="conda_list.png#pci_center" /></p>
 <h2 id="删除指定的包">删除指定的包</h2>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda remove &lt;pkgname&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="更新指定的包">更新指定的包</h2>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda update &lt;pkgname&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="搜索指定的包">搜索指定的包</h2>
-<p>这里可以使用全名搜索某个包</p>
+<p>可以使用全名搜索某个包</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda search --full-name &lt;pkgname&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="模糊搜索包">模糊搜索包</h2>
-<p>例如，模糊查找所有与torch相关字段的包。</p>
+<p>也可以使用模糊搜索。例如，模糊查找所有与torch相关字段的包。</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda search torch</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
