@@ -426,4 +426,35 @@ sys.path[0], os.path.realpath(<strong>file</strong>)[0]</h2>
         <tag>pytorch</tag>
       </tags>
   </entry>
+  <entry>
+    <title>深度学习-pytorch实践-day6</title>
+    <url>/2022/03/14/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-pytorch%E5%AE%9E%E8%B7%B5-day6/</url>
+    <content><![CDATA[<blockquote>
+<p>Python 数组初始化 大坑</p>
+<span id="more"></span>
+</blockquote>
+<h2 id="错误示例-list-多维数组初始化">（错误示例） list
+多维数组初始化</h2>
+<p>使用list 定义 2x3 的数组dp, 并初始化为全0。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">dp = [[<span class="number">0</span>]*<span class="number">3</span>] * <span class="number">2</span> </span><br><span class="line"></span><br><span class="line">$ [[<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>], [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>]]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>看似没毛病，但其实是大坑！后期debug很难定位。</p>
+</blockquote>
+<p>那么下面对 <code>dp[1][1]</code> 赋值，并查看dp的值。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">dp[<span class="number">1</span>][<span class="number">1</span>] = <span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(dp)</span><br><span class="line"></span><br><span class="line">$ [[<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>], [<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>]]</span><br></pre></td></tr></table></figure>
+<p>会发现，不仅是[1][1] 位置被修改了，而且[0][1]也被修改了。</p>
+<h2 id="正确示例-list-多维数组初始化">（正确示例） list
+多维数组初始化</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">dp = [[<span class="number">0</span> <span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, column)] <span class="keyword">for</span> m <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, row)]</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>深度学习 pytorch实践</category>
+        <category>pytorch</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+        <tag>python</tag>
+        <tag>pytorch</tag>
+      </tags>
+  </entry>
 </search>
